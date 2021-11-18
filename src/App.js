@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "./Nav";
 import { BrowserRouter as Router, Switch, Route, Routes, Link } from 'react-router-dom'
 import About from "./About.js";
+import Main from "./Main";
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -18,14 +19,4 @@ class App extends React.Component {
   }
 }
 
-
-const Main = (props) => {
-  return (
-    <div className='mainWrap'>
-      <Navigation />
-      <h1> Home Page  </h1>
-        <p>Hello {props.name}</p>
-    </div>
-  )
-}
 export default App;

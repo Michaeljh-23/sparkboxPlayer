@@ -11,8 +11,11 @@ const config = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: 'babel-loader',
-        exclude: /node_modules/
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        options: {
+          presets: ["@babel/preset-env", "@babel/preset-react"],
+        },
       },
       {
         test: /\.css$/,
@@ -20,9 +23,23 @@ const config = {
           'style-loader',
           'css-loader'
         ]
-      }
-    ]
-  }
+      },
+      {
+        loader: 'html-loader',
+        test: /\.html$/,
+      },
+      {
+        loader: 'url-loader',
+        test: /\.mp4$/,
+        options: {
+          limit: 1000,
+          name: 'dist/Videos/[name].[ext]'
+        },
+      }]
+  },
+  resolve: {
+    extensions: [".js", ".jsx"],
+  },
 };
 
 module.exports = config;
