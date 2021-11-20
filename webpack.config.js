@@ -33,9 +33,24 @@ const config = {
         test: /\.mp4$/,
         options: {
           limit: 1000,
-          name: 'dist/Videos/[name].[ext]'
+          name: '/Videos/[name].[ext]'
         },
-      }]
+      },
+      {
+        test: /\.mp3$/,
+        loader: 'file-loader',
+        options: {
+          name: '/Media/[name].[hash:8].[ext]'
+        }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },]
   },
   resolve: {
     extensions: [".js", ".jsx"],

@@ -1,11 +1,17 @@
 * {
   font-family: 'Roboto Condensed', sans-serif;
 }
+.backgroundImage {
+ height: 100%;
+ width: 100%;
+}
 
 .mainWrap {
   border-style: solid;
   border-color: black;
-  background-color: rgba(172, 172, 172, 0.886);
+
+  background-image: url('../dist/a79eeb782192cd557e996596c6ec7713.jpeg');
+  background-size: cover;
   position: absolute;
   top: 15%;
   left: 15%;
@@ -24,6 +30,7 @@
     height: 70%;
     width: 70%;
     }
+
   .navbar-brand {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
@@ -61,6 +68,68 @@
     text-decoration: none;
     cursor: pointer;
   }
+.folderFigureAS {
+  position: relative;
+  left: 90%;
+}
+
+.folderAS {
+  background: transparent no-repeat;
+  top: 80px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 89%;
+  border: none;
+  transform: translateX(-50%);
+  width: 70px;
+}
+.folderBeats {
+  background: transparent no-repeat;
+  top: 170px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 89%;
+  border: none;
+  transform: translateX(-50%);
+  width: 70px;
+}
+.folderBass {
+  background: transparent no-repeat;
+  top: 100px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 70%;
+  border: none;
+  transform: translateX(-50%);
+  width: 70px;
+}
+.folderImg {
+height: 50px;
+width: 57px;
+}
+
+.folderASText {
+  border: black;
+  border-style: solid;
+  border-width: 0.2px;
+  padding-right: 5px;
+  padding-left: 5px;
+  width: 70px;
+  background-color: gainsboro;
+
+}
+.file {
+  height: 40px;
+  width: 40px;
+}
+.songFileBtn {
+
+  margin: auto;
+  width: 33%;
+}
 
 /* Model Drag and Resize functionality */
 .flexible-modal {
@@ -68,7 +137,6 @@
   z-index: 1;
   border: 1px solid #ccc;
   background: white;
-
 }
 .my-modal {
  background-color: azure;
