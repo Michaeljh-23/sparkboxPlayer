@@ -131,10 +131,16 @@ width: 57px;
   height: 40px;
   width: 40px;
 }
-.songFileBtn {
-
-  margin: auto;
-  width: 33%;
+.song-card {
+  width: 30%;
+  height: 8rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  align-items: center;
+}
+.bass-modal-body {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Model Drag and Resize functionality */
@@ -173,4 +179,11 @@ width: 57px;
   top:0;
   cursor:move;
 }
+.flexible-modal-drag-area-right {
+  position: absolute;
+}
+.flexible-modal-drag-area-left {
+  position: absolute;
+}
+
 /* End Model Drag and Resize functionality */

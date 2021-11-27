@@ -106,24 +106,30 @@ class Main extends React.Component {
           disableResize={true}
           initWidth={400}
           initHeight={300}
+          top={320}
+          left={60}
           onFocus={() => console.log("Modal is clicked")}
           className={"bass-modal"}
           onRequestClose={this.closeModalTwo}
           isOpen={this.state.modalTwoIsOpen}>
           <h3>Bass Specialist</h3>
-          <div className="body">
-            <Card style={{ width: '6rem', height: '8rem' , alignItems:'center'}}>
+          <div className="bass-modal-body">
+            <Card className='song-card' onClick={() => this.props.update_song(OnlyYou, this.props.playIt)} >
               <Card.Img variant="top" src={file} style={{height: '3rem', width: '3rem'}} />
-              <Card.Body>
-                <Card.Text>
-                  Play It's Only You
-                </Card.Text>
-              </Card.Body>
+              <Card.Body> <Card.Text> Play It's Only You </Card.Text> </Card.Body>
             </Card>
-            <button onClick={() => this.props.update_song(OnlyYou, this.props.playIt)}>Play It's Only You</button>
-            <button onClick={() => this.props.update_song(MarchOnMars, this.props.playIt)}>Play March On Mars</button>
-            <button onClick={() => this.props.update_song(Ignite, this.props.playIt)}>Play Ignite</button>
-            <button onClick={() => this.props.update_song(HeadBop, this.props.playIt)}>Play Head Bop</button>
+            <Card className='song-card' onClick={() => this.props.update_song(MarchOnMars, this.props.playIt)} >
+              <Card.Img variant="top" src={file} style={{height: '3rem', width: '3rem'}} />
+              <Card.Body> <Card.Text> Play March On Mars </Card.Text> </Card.Body>
+            </Card>
+            <Card className='song-card' onClick={() => this.props.update_song(HeadBop, this.props.playIt)} >
+              <Card.Img variant="top" src={file} style={{height: '3rem', width: '3rem'}} />
+              <Card.Body> <Card.Text> Play Head Bop </Card.Text> </Card.Body>
+            </Card>
+            <Card className='song-card' onClick={() => this.props.update_song(Ignite, this.props.playIt)} >
+              <Card.Img variant="top" src={file} style={{height: '3rem', width: '3rem'}} />
+              <Card.Body> <Card.Text> Play Ignite </Card.Text> </Card.Body>
+            </Card>
           </div>
           <button onClick={this.closeModalTwo}>
             X
@@ -134,6 +140,8 @@ class Main extends React.Component {
           disableResize={true}
           initWidth={400}
           initHeight={300}
+          top={100}
+          left={20}
           onFocus={() => console.log("Modal is clicked")}
           className={"beats-modal"}
           onRequestClose={this.closeModalThree}
