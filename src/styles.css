@@ -5,12 +5,18 @@
  height: 100%;
  width: 100%;
 }
+html {
+  background-image: repeating-linear-gradient(45deg, rgba(226, 226, 226,0.06) 0px, rgba(226, 226, 226,0.06) 2px,transparent 2px, transparent 4px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
+  background-color: black;
+  height: 100%;
+
+}
 
 .mainWrap {
   border-style: solid;
   border-color: black;
 
-  background-image: url('../dist/a79eeb782192cd557e996596c6ec7713.jpeg');
+  background-image: repeating-linear-gradient(284deg, transparent 0px, transparent 1px,rgb(251,251,251) 1px, rgb(251,251,251) 3px),repeating-linear-gradient(14deg, transparent 0px, transparent 1px,rgb(251,251,251) 1px, rgb(251,251,251) 3px),linear-gradient(90deg, rgb(222,222,222),rgb(222,222,222));
   background-size: cover;
   position: absolute;
   top: 15%;
@@ -143,7 +149,7 @@ width: 57px;
 }
 .flexible-modal-mask {
   position: fixed;
-  height: 100%;
+  height: 0%;
   background: none;
   top:0;
   left:0;

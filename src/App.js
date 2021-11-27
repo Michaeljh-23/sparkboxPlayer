@@ -11,7 +11,8 @@ class App extends React.Component {
     super(props)
     this.state = {
       currSong: new Audio(bessFriend),
-      isPlaying: false
+      isPlaying: false,
+      init: false
     }
     this.update_song = this.update_song.bind(this);
     this.stop_sound = this.stop_sound.bind(this);
@@ -39,6 +40,7 @@ class App extends React.Component {
       this.stop_sound();
       this.setState({
         currSong: new Audio(clicked),
+        init: true
       })
       resolve('success!')
     })
@@ -78,12 +80,13 @@ class App extends React.Component {
         <Routes>
           <Route path="/" element={<Main
           name={this.props.name}
+          init={this.state.init}
           update_song={this.update_song}
           playIt={this.playIt}
           stop_sound={this.stop_sound}
           playPause={this.playPause}
           restart_track={this.restart_track}/>}/>
-          <Route path='/about' element={<About playPause={this.playPause} stop_sound={this.stop_sound} restart_track={this.restart_track}/>} />
+          <Route path='/about' element={<About init={this.state.init} playPause={this.playPause} stop_sound={this.stop_sound} restart_track={this.restart_track}/>} />
         </Routes>
       </Router>
     )

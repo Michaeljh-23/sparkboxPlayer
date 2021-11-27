@@ -31,7 +31,9 @@ const Navigation = props => {
                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                   </NavDropdown>
                   <NavDropdown title="Media" id="basic-nav-dropdown">
+                    {props.init ?
                     <NavDropdown.Item onClick={props.playPause}>Play || Pause</NavDropdown.Item>
+                   : <NavDropdown.Item style={{color: 'rgba(130, 130, 130, 0.55)'}}>Play || Pause</NavDropdown.Item>}
                     <NavDropdown.Item onClick={props.stop_sound}>Stop</NavDropdown.Item>
                     <NavDropdown.Item onClick={props.restart_track}>Restart</NavDropdown.Item>
                     <NavDropdown.Divider />
